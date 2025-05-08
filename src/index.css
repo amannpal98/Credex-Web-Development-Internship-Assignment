@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold leading-tight;
+  }
+  
+  h1 {
+    @apply text-4xl md:text-5xl;
+  }
+  
+  h2 {
+    @apply text-3xl md:text-4xl;
+  }
+  
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+  
+  p {
+    @apply leading-relaxed;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl;
+  }
+  
+  .btn {
+    @apply inline-flex items-center justify-center rounded-md font-medium transition-colors 
+    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-50 
+    disabled:pointer-events-none px-4 py-2;
+  }
+  
+  .btn-primary {
+    @apply bg-blue-600 text-white hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600;
+  }
+  
+  .btn-secondary {
+    @apply bg-teal-600 text-white hover:bg-teal-700 dark:bg-teal-500 dark:hover:bg-teal-600;
+  }
+  
+  .btn-outline {
+    @apply border border-gray-300 bg-transparent hover:bg-gray-100 dark:border-gray-700 
+    dark:hover:bg-gray-800 text-gray-700 dark:text-gray-200;
+  }
+  
+  .card {
+    @apply rounded-xl bg-white dark:bg-gray-800 shadow-md hover:shadow-lg transition-shadow 
+    duration-300 overflow-hidden;
+  }
+  
+  .section {
+    @apply py-16 md:py-24;
+  }
+  
+  .section-title {
+    @apply text-center mb-12;
+  }
+  
+  .section-title h2 {
+    @apply text-3xl md:text-4xl font-bold mb-4;
+  }
+  
+  .section-title p {
+    @apply text-gray-600 dark:text-gray-400 max-w-2xl mx-auto;
+  }
+  
+  .input {
+    @apply block w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white 
+    dark:bg-gray-800 text-gray-900 dark:text-gray-100 px-4 py-3 focus:outline-none 
+    focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200;
+  }
+  
+  .label {
+    @apply block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1;
+  }
+  
+  .animate-on-scroll {
+    @apply opacity-0 transition-all duration-700 ease-out;
+  }
+  
+  .animate-fade-up {
+    @apply translate-y-10;
+  }
+  
+  .animate-visible {
+    @apply opacity-100 translate-y-0;
+  }
+}
